@@ -3,6 +3,11 @@ from flask import Blueprint
 bp = Blueprint('main', __name__, url_prefix='/')
 
 
+@bp.route('/hello')
+def helo_pybo():
+    return 'Hello, pybo!'
+
+
 @bp.route('/')
-def hello_pybo():
-    return 'Hello, Pybo!'
+def index():
+    return 'Pybo index'
